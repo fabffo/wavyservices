@@ -1,0 +1,39 @@
+# Autoriser tous les robots à explorer le site
+User-agent: *
+
+# Autoriser les pages principales
+Allow: /index.html
+Allow: /nousDecouvrir.html
+Allow: /nousRealisons.html
+Allow: /nousContacter.html
+
+# Bloquer les répertoires potentiels sensibles ou inutiles (ajuste selon ton arborescence)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /config/
+Disallow: /scripts/
+
+# Bloquer les fichiers sensibles (ajuste selon tes fichiers réels)
+Disallow: /.env
+Disallow: /config.php
+Disallow: /README.txt
+
+# Éviter l’indexation des paramètres de tri, recherche, pagination (si présents)
+Disallow: /*?search=
+Disallow: /*?page=
+Disallow: /*?tri=
+Disallow: /*?orderby=
+
+# Empêcher l’accès à certains bots abusifs
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# (Optionnel) Limite de fréquence pour ne pas surcharger ton serveur
+Crawl-delay: 10
+
+# Déclaration du sitemap XML
+Sitemap: https://wavyservices.fr/sitemap.xml

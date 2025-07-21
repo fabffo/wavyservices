@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Encodage & responsive -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre SEO (≤60 caractères) -->
+  <title>Nous recrutons – Wavy Services | Offres d’emploi & Carrières</title>
+
+  <!-- Méta-description (150–160 caractères) -->
+  <meta
+    name="description"
+    content="Découvrez les postes ouverts chez Wavy Services : CDI, CDD et télétravail partiel. Rejoignez nos équipes en recrutement, gestion, IT ou support technique."
+  />
+
+  <!-- URL canonique -->
+  <link rel="canonical" href="https://https://www.wavyservices.fr/nousRecrutons.html">
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="stylesWavy.css">
+
+  <!-- Styles spécifiques au formulaire et aux offres -->
+  <style>
+    .search-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .search-form select, .search-form button {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .offre {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .offre h3 {
+      margin-bottom: 0.5rem;
+      color: var(--couleur-principale);
+    }
+    .offre p, .offre ul {
+      margin-bottom: 1rem;
+    }
+    .offre ul {
+      list-style: disc;
+      margin-left: 1.2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: var(--couleur-accent);
+      color: #fff;
+      border-radius: 0.3rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: darken(var(--couleur-accent), 10%);
+    }
+  </style>
+</head>
+<body>
+ <!-- Header fixe -->
+<header>
+<div class="logo">
+    <a href="index.html">
+      <img src="imagesWavy/logowavy.jpg" alt="Wavy Services Logo" />
+    </a>
+  </div>
+    <nav>
+      <ul>
+        <li><a href="nousDecouvrir.html#histoire">Nous découvrir</a>
+          <ul>
+            <li><a href="nousDecouvrir.html#histoire">Notre histoire</a></li>
+            <li><a href="nousDecouvrir.html#equipe_fabrice">Notre équipe</a></li>
+            <li><a href="nousDecouvrir.html#conviction">Nos convictions</a></li>
+            <li><a href="nousDecouvrir.html#activites">Nos activités</a></li>
+			<li><a href="nousDecouvrir.html#clients">ils nous font confiance</a></li>
+			 <li><a href="nousDecouvrir.html#pdf">Notre certification Qualiopi</a></li>
+          </ul>
+        </li>
+		<li><a href="nousRealisons.html">Nous realisons</a>
+		<ul>
+		<li><a href="nousRealisons.html#presentation-service">recrutement</a></li>
+        <li><a href="nousRealisons.html#prestation">prestation</a></li>
+        <li><a href="nousRealisons.html#formation">formation</a></li>
+        <li><a href="nousRealisons.html#bilan">bilan de compétences</a></li>
+		</ul>
+		</li>
+        <li><a href="nousRecrutons.html">Nous recrutons</a></li>
+		<li><a href="nousContacter.html">Nous contacter</a>
+		</li>
+      </ul>
+    </nav>
+
+<!-- Conteneur générique pour vos icônes de contact -->
+<div class="contact-icons">
+ <a class="icon"
+     href="https://www.linkedin.com/company/wavy-services/"
+     target="_blank"
+     rel="noopener"
+     aria-label="LinkedIn">
+   <img src="imagesWavy/linkedin.jpg" alt="linkendin" />
+  </a>
+  <!-- Téléphone avec tooltip -->
+ <a href="nousTelephoner.html" class="icon">
+    <img src="imagesWavy/telephone.jpg" alt="Nous telephoner">
+  </a>
+
+  <!-- Mail cliquable vers la page de contact -->
+  <a href="nousContacter.html" class="icon">
+    <img src="imagesWavy/mail.jpg" alt="Nous contacter par mail">
+  </a>
+</div>
+
+</header>
+
+ <main>
+    <section id="offres">
+        <h2>Nous recrutons</h2>
+
+        <!-- Formulaire de sélection d'offre -->
+        <form class="search-form" onsubmit="scrollToOffer(); return false;">
+            <label for="choix-offre">Choisissez une offre :</label>
+            <select id="choix-offre">
+                <option value="offre1">1. Chargé de Recrutement et Mobilité Interne H/F</option>
+                <option value="offre2">2. Assistant Ressources Humaines H/F</option>
+                <option value="offre3">3. Gestionnaire de Paie H/F</option>
+                <option value="offre4">4. Développeur SAP H/F</option>
+                <option value="offre5">5. SAP Supply Lead H/F</option>
+                <option value="offre6">6. Spécialiste Intégration Azure H/F</option>
+                <option value="offre7">7. Assistant de Direction Générale H/F</option>
+				<option value="offre8">8. Administrateur Système Linux – AS400 (IBMi) H/F</option>
+            </select>
+            <button type="submit">Rechercher</button>
+        </form>
+
+
+     <!-- Offre 1 -->
+<section id="offre1" class="offre">
+  <h3>1. Chargé de Recrutement et Mobilité Interne H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Nanterre (92)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +2 | Expérience : 1 à 7 ans et +7 ans</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>WAVY SERVICES recrute pour un de ses clients un(e) Chargé(e) de Recrutement et Mobilité Interne pour piloter les recrutements et valoriser la marque employeur.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Prendre en charge de A à Z les recrutements de son périmètre</li>
+    <li>Élaborer et mettre en œuvre la stratégie de sourcing (chasse, viviers, jobboards, réseaux sociaux…)</li>
+    <li>Suivre prestataires, indicateurs de performance et reporting</li>
+    <li>Organiser l’intégration (onboarding) et l’accueil des nouveaux collaborateurs</li>
+    <li>Accompagner la mobilité interne : identifier les postes, conseiller les salariés</li>
+    <li>Participer à des projets RH (image employeur, on‑boarding, réseaux sociaux…)</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Formation Bac +2 en Ressources Humaines ou équivalent</li>
+    <li>Expérience confirmée en recrutement / mobilité interne (5 à 7 ans minimum)</li>
+    <li>Organisation, autonomie, esprit d’équipe et dynamisme</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/67359484.html" class="btn">Postuler</a>
+</section>
+
+
+<!-- Offre 2 -->
+<section id="offre2" class="offre">
+  <h3>2. Assistant Ressources Humaines H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Toulouse (31)</p>
+  <p><strong>Type de contrat :</strong> CDD</p>
+  <p><strong>Niveau :</strong> Non précisé | Expérience : non précisée</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>WAVY SERVICES recrute pour l’un de ses clients un(e) Assistant(e) Ressources Humaines pour accompagner la gestion administrative et humaine de l’agence de Toulouse.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Suivi des dossiers collaborateurs : embauches, contrats, DPAE, visites médicales, arrêts maladie, congés, accidents du travail, procédures disciplinaires</li>
+    <li>Participation au recrutement : diffusion d’annonces, pré‑qualification, suivi des candidatures</li>
+    <li>Veille sociale et gestion de la vie des collaborateurs</li>
+    <li>Rédaction de courriers et documents RH</li>
+    <li>Établissement et suivi des bons de commande</li>
+    <li>Suivi des approvisionnements et réception des livraisons</li>
+    <li>Gestion du courrier entrant et sortant de l’agence</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Compétences en gestion des ressources humaines et support administratif</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/66930615.html" class="btn">Postuler</a>
+</section>
+
+      
+
+
+      <!-- Offre 3 -->
+<section id="offre3" class="offre">
+  <h3>3. Gestionnaire de Paie H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Créteil (94)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +2 à Bac +3/4 | Expérience : 1 à 7 ans et +7 ans</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>WAVY SERVICES recrute pour un de ses clients un(e) gestionnaire de paie junior. Vous apprendrez et exercerez toutes les missions liées à la paie.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Préparation des bulletins de paie (temps de travail, congés, RTT, heures sup, primes…)</li>
+    <li>Saisie et contrôle des données dans le logiciel de paie</li>
+    <li>Établissement des déclarations fiscales et sociales (URSSAF, retraite, mutuelle…)</li>
+    <li>Réalisation de la DSN mensuelle</li>
+    <li>Calcul des indemnités de départ et gestion de la portabilité</li>
+    <li>Analyses post‑paie et traitement des questions des salariés</li>
+    <li>Participation aux projets paie et suivi des dossiers maladie, prévoyance…</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Formation Bac +2 (paie, RH…)</li>
+    <li>Maîtrise des techniques de paie et connaissance du droit social & fiscal</li>
+    <li>Organisation, rigueur et sens relationnel</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/67158527.html" class="btn">Postuler</a>
+
+</section>
+
+<!-- Offre 4 -->
+<section id="offre4" class="offre">
+  <h3>4. Développeur SAP H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Courbevoie (92)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +5 | Expérience : 1 à 7 ans et +7 ans</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>Rejoignez un groupe international en pleine transformation digitale : en tant que Développeur SAP (ABAP / Fiori), vous accompagnerez le programme de migration vers SAP S/4 Hana, participerez aux projets internes et prendrez en charge la maintenance et le support production.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Rédiger les spécifications techniques et chiffrage des évolutions</li>
+    <li>Développer en ABAP sur SAP ECC6 (FI/CO, MM, SD) et sur SAP S/4 Hana (Fiori, CDS, OData…)</li>
+    <li>Organiser et réaliser les phases de recette</li>
+    <li>Produire et maintenir la documentation technique</li>
+    <li>Analyser et corriger les incidents de production en lien avec la TMA</li>
+    <li>Mettre en œuvre des flux de données entre SAP et applications périphériques</li>
+    <li>Contribuer à la veille technologique SAP</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Minimum 3 ans d’expérience en développement ABAP/Fiori sur SAP</li>
+    <li>Connaissance SAP ECC6 et idéalement S/4 Hana, SAPUI5/CDS/OData</li>
+    <li>Anglais courant</li>
+    <li>Formation Bac +5 (école d’ingénieur ou équivalent)</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/59390194.html" class="btn">Postuler</a>
+</section>
+
+     <!-- Offre 5 -->
+<section id="offre5" class="offre">
+  <h3>5. SAP Supply Lead H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Courbevoie (92)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +3 à Bac +5 | Expérience : 8 ans minimum</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>Pour un groupe international engagé dans la transformation digitale, vous encadrez l’équipe Supply du CoE SAP et pilotez les projets de migration S/4 Hana et la maintenance évolutive des solutions SAP sur un périmètre international.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Encadrer l’équipe Supply et assurer la cohésion inter‑équipes</li>
+    <li>Garantir la maintenance et l’évolution des solutions SAP</li>
+    <li>Participer à la définition et mise en œuvre du Core Model SAP (projet S/4 Hana)</li>
+    <li>Coordonner les équipes internes et externes (consultants, éditeurs)</li>
+    <li>Conduire des analyses fonctionnelles détaillées et maintenir la documentation</li>
+    <li>Assurer le support, la formation et le suivi utilisateurs</li>
+    <li>Piloter les projets à enjeux pour le groupe dans un contexte multiculturel</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>8 ans d’expérience minimum en tant que consultant SAP Supply/Retail</li>
+    <li>Expertise SAP (MM, SD, Retail), S/4 Hana, intégration Middleware/EDI</li>
+    <li>Expérience confirmée d’encadrement d’équipes (3 ans minimum)</li>
+    <li>Diplôme Bac +3/5 en informatique, achats, logistique ou vente</li>
+    <li>Anglais courant, excellente capacité d’organisation et d’analyse</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/59390194.html" class="btn">Postuler</a>
+</section>
+
+<!-- Offre 6 -->
+<section id="offre6" class="offre">
+  <h3>6. Spécialiste Intégration Azure H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Courbevoie (92)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +3 à Bac +4 | Expérience : 1 à 7 ans / +7 ans</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>Au sein d’un groupe international, vous concevez et déployez des architectures d’intégration sur Azure (Data Factory, Logic Apps, API Management…), et assurez la documentation, le support et le pilotage des flux de données.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Analyser les sources de données (formats, schémas…)</li>
+    <li>Développer des flux ETL/ELT et d’intégration (Logic Apps, API…)</li>
+    <li>Gérer le code et les livraisons via Azure DevOps</li>
+    <li>Rédiger et maintenir la documentation technique</li>
+    <li>Collaborer avec les analystes métier et data</li>
+    <li>Assurer le support et la coordination technique dans un contexte international</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Maîtrise des outils Azure : Data Factory, Logic Apps, Service Bus, Event Grid, DevOps…</li>
+    <li>Langages : SQL, Node.js, Python (XML un plus)</li>
+    <li>Bon communicant en français et anglais</li>
+    <li>Esprit d’analyse, adaptabilité, rigueur et travail en équipe</li>
+    <li>Formation Bac +3/4, expérience 1 à 7+ ans</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/61417460.html" class="btn">Postuler</a>
+</section>
+
+<!-- Offre 7 -->
+<section id="offre7" class="offre">
+  <h3>7. Assistant de Direction Générale H/F</h3>
+  <p><strong>Entreprise :</strong> WAVY SERVICES</p>
+  <p><strong>Localisation :</strong> Courbevoie (92)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +2 à Bac +4 | Expérience : 5 ans minimum</p>
+  <p><strong>Secteur :</strong> Services aux Entreprises</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>Pour un groupe international, vous gérez l’agenda du Directeur Général (et de ses deux adjoints), organisez réunions et déplacements, assurez le support administratif et la coordination avec les différents services.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Gérer les agendas, rendez‑vous, réunions et déplacements professionnels</li>
+    <li>Traiter le courrier, les appels, les e‑mails, rédiger comptes‑rendus et présentations</li>
+    <li>Classer, archiver et coordonner la communication interne/externe</li>
+    <li>Organiser événements internes et externes (comités, séminaires…)</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Minimum 5 ans d’expérience en assistanat de direction (idéalement DG) en contexte international</li>
+    <li>Bac +2 à +4, maîtrise du Pack Office et d’Outlook</li>
+    <li>Anglais courant, excellente organisation et gestion des priorités</li>
+    <li>Discrétion, autonomie, réactivité et bon relationnel</li>
+  </ul>
+
+  <a href="https://www.hellowork.com/fr-fr/emplois/67010242.html" class="btn">Postuler</a>
+</section>
+
+<!-- Offre 8 -->
+<section id="offre8" class="offre">
+  <h3>8. Administrateur Système Linux – AS400 (IBMi) H/F</h3>
+  <p><strong>Entreprise :</strong> Link Consulting</p>
+  <p><strong>Localisation :</strong> Toulouse (31)</p>
+  <p><strong>Type de contrat :</strong> CDI</p>
+  <p><strong>Niveau :</strong> Bac +2/3 | Expérience : non précisée</p>
+  <p><strong>Secteur :</strong> Tech – Systèmes & Réseaux</p>
+
+  <h4>Résumé de l'offre</h4>
+  <p>Notre client, acteur national du bâtiment, recrute un(e) Administrateur(rice) Système Linux – AS400 (IBMi) pour renforcer son infrastructure à Toulouse.</p>
+
+  <h4>Missions</h4>
+  <ul>
+    <li>Maintenir et moderniser les systèmes Linux et IBMi/AS400 (mises à jour, correctifs, performance)</li>
+    <li>Surveiller la sécurité, sauvegarde, et disponibilité des environnements</li>
+    <li>Assurer le support technique niveau 2/3 pour les utilisateurs IT et métiers</li>
+    <li>Documenter les procédures et référentiels</li>
+    <li>Collaborer avec les prestataires externes</li>
+    <li>Administre et fait évoluer la supervision (Centreon, Grafana, …)</li>
+  </ul>
+
+  <h4>Profil recherché</h4>
+  <ul>
+    <li>Formation Bac +2/3 en système, réseau ou équivalent</li>
+    <li>Bonnes connaissances en Linux et administration IBMi/AS400</li>
+    <li>Compétences en sécurité système, sauvegarde et supervision</li>
+    <li>Capacité à travailler en équipe et à monter en compétences</li>
+  </ul>
+
+  <a href="https://www.free-work.com/fr/tech-it/administrateur-systeme-linux/job-mission/administrateur-systeme-as-400-ibmi" class="btn">Postuler</a>
+</section>
+
+      
+
+      
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Wavy Services. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function scrollToOffer() {
+      const selected = document.getElementById('choix-offre').value;
+      const target = document.getElementById(selected);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
