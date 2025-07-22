@@ -9,9 +9,9 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Page de présentation -->
+  <!-- Page de recrutement -->
   <url>
-    <loc>https://wavyservices.fr/nousDecouvrir.html</loc>
+    <loc>https://wavyservices.fr/nousRecrutons.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
     <loc>https://wavyservices.fr/nousRealisons.html</loc>
     <lastmod>2025-07-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

@@ -3,7 +3,7 @@ User-agent: *
 
 # Autoriser les pages principales
 Allow: /index.html
-Allow: /nousDecouvrir.html
+Allow: /nousRecrutons.html
 Allow: /nousRealisons.html
 Allow: /nousContacter.html
 
