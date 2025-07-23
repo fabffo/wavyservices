@@ -1,0 +1,125 @@
+
+INSTALLATION D'APACHE HTTP SERVER SUR WINDOWS (VERSION APACHE LOUNGE)
+======================================================================
+
+1. Télécharger Apache
+---------------------
+- Site : https://www.apachelounge.com/download/
+- Fichier : httpd-2.4.xx-win64-VS17.zip (ou Win32 si nécessaire)
+
+2. Décompresser
+---------------
+- Dézipper dans : C:\Program Files\Apache24
+
+3. Configurer httpd.conf
+------------------------
+- Fichier : C:\Program Files\Apache24\conf\httpd.conf
+- Vérifier ou modifier les lignes suivantes :
+    ServerRoot "C:/Program Files/Apache24"
+    DocumentRoot "C:/Program Files/Apache24/htdocs"
+    ServerName localhost:80   (décommenter si besoin)
+
+- Activer les modules suivants (décommenter si nécessaire) :
+    LoadModule ssl_module modules/mod_ssl.so
+    LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+    Include conf/extra/httpd-ssl.conf
+
+4. Créer le dossier SSL
+------------------------
+    mkdir "C:\Program Files\Apache24\conf\ssl"
+
+5. Vérifier la présence de openssl.cnf
+---------------------------------------
+- Fichier attendu : C:\Program Files\Apache24\conf\openssl.cnf
+- Si manquant, le télécharger :
+  https://raw.githubusercontent.com/openssl/openssl/master/apps/openssl.cnf
+
+6. Générer le certificat auto-signé
+-----------------------------------
+cd "C:\Program Files\Apache24\bin"
+openssl.exe req -x509 -config "C:\Program Files\Apache24\conf\openssl.cnf" -nodes -days 365 -newkey rsa:2048 -keyout "C:\Program Files\Apache24\conf\ssl\server.key" -out "C:\Program Files\Apache24\conf\ssl\server.crt"
+
+7. Configurer httpd-ssl.conf
+----------------------------
+- Fichier : C:\Program Files\Apache24\conf\extra\httpd-ssl.conf
+- Modifier les lignes suivantes :
+
+    SSLCertificateFile "C:/Program Files/Apache24/conf/ssl/server.crt"
+    SSLCertificateKeyFile "C:/Program Files/Apache24/conf/ssl/server.key"
+
+8. Redémarrer Apache
+---------------------
+httpd.exe -k restart
+
+9. Tester HTTPS
+---------------
+- Ouvrir : https://localhost
+- Accepter le message "connexion non sécurisée" ou "votre connexion n’est pas privée"
+  ➤ Ce message est normal car le certificat est auto-signé
+  ➤ La connexion est néanmoins bien chiffrée (SSL actif)
+
+10. (Optionnel) Supprimer l’avertissement de sécurité
+------------------------------------------------------
+Pour ne plus voir l’avertissement localement :
+
+- Ajouter le certificat server.crt dans le magasin de certificats Windows :
+  1. Double-cliquer sur server.crt
+  2. Cliquer sur "Installer le certificat"
+  3. Choisir "Placer tous les certificats dans le magasin suivant"
+  4. Sélectionner "Autorités de certification racines de confiance"
+  5. Valider et redémarrer le navigateur
+
+Commandes utiles :
+------------------
+- Redémarrer Apache : httpd.exe -k restart
+- Arrêter Apache     : httpd.exe -k stop
+- Tester Apache      : http://localhost  ou https://localhost
+
+
+
+
+-----------------------------------------
+Ajouter des noms de domaines localement dans conf/extra/http-vhost-conf
+<VirtualHost *:80>
+
+    ServerName wavyservices.local
+
+    DocumentRoot "C:\Program Files\Apache24\htdocs\wavyservices"
+
+    <Directory "C:\Program Files\Apache24\htdocs\wavyservices">
+
+        Options Indexes FollowSymLinks
+
+        AllowOverride All
+
+        Require all granted
+
+    </Directory>
+
+</VirtualHost>
+
+<VirtualHost *:80>
+
+    ServerName wavyservicesEnDev.local
+
+    DocumentRoot "C:\Program Files\Apache24\htdocs\wavyservicesEnDev"
+
+    <Directory "C:\Program Files\Apache24\htdocs\wavyservicesEnDev">
+
+        Options Indexes FollowSymLinks
+
+        AllowOverride All
+
+        Require all granted
+
+    </Directory>
+
+</VirtualHost>
+
+
+et MAJ DE C:\Windows\System32\drivers\etc\hosts avec 
+127.0.0.1 wavyservicesEnDev.local
+127.0.0.1 wavyservices.local
+
+et décommenter dans http.conf
+Include conf/extra/httpd-vhosts.conf
